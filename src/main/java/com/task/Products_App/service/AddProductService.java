@@ -18,9 +18,6 @@ public class AddProductService {
 
     @Autowired
     private ProductRepository productRepository;
-    @Autowired
-    private RestTemplateAutoConfiguration restTemplateAutoConfiguration;
-
 
     public Product addProduct(ProductRequest request) {
         if (request.name().isEmpty()) {
