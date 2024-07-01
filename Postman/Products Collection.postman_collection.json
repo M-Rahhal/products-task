@@ -116,6 +116,25 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Getting Report",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/products/report",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"report"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
