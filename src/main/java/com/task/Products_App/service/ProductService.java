@@ -19,11 +19,13 @@ public class ProductService {
     private ProductRepository productRepository;
 
     public Product addProduct(AddProductRequest request) {
+        if (request == null)
+            throw new IllegalArgumentException("you may missed some parameters");
         if (request.name().isEmpty()) {
             throw new IllegalArgumentException("Name cannot be empty!");
         }
-        if (request.price() <= 0 )
-            throw new IllegalArgumentException("Price cannot be negative or Zero!");
+        if (request.price() == null || request.price() <= 0 )
+            throw new IllegalArgumentException("Price cannot be empty, negative or Zero!");
 
         Product product = Product.builder()
                 .price(BigDecimal.valueOf(request.price()))
