@@ -3,10 +3,9 @@ package com.task.Products_App.service;
 
 import com.task.Products_App.entity.Product;
 import com.task.Products_App.repo.ProductRepository;
-import com.task.Products_App.req.ProductRequest;
+import com.task.Products_App.req.AddProductRequest;
 import com.task.Products_App.req.UpdateProductRequest;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.web.client.RestTemplateAutoConfiguration;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
@@ -14,12 +13,12 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class AddProductService {
+public class ProductService {
 
     @Autowired
     private ProductRepository productRepository;
 
-    public Product addProduct(ProductRequest request) {
+    public Product addProduct(AddProductRequest request) {
         if (request.name().isEmpty()) {
             throw new IllegalArgumentException("Name cannot be empty!");
         }

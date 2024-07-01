@@ -2,7 +2,7 @@ package com.task.Products_App.controller;
 
 
 import com.task.Products_App.entity.Product;
-import com.task.Products_App.req.ProductRequest;
+import com.task.Products_App.req.AddProductRequest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -26,14 +26,14 @@ public class ProductController {
 
 
     @PostMapping
-    public ResponseEntity<Product> addProduct(@RequestBody ProductRequest request) {
+    public ResponseEntity<Product> addProduct(@RequestBody AddProductRequest request) {
         return null;
     }
 
 
     @PutMapping(path = "/{id}")
     public ResponseEntity<Product> updateProduct(
-            @RequestBody ProductRequest request , @PathVariable int id) {
+            @RequestBody AddProductRequest request , @PathVariable int id) {
         return null;
     }
 
